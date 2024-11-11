@@ -1,0 +1,212 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Site</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <nav aria-label="Primary Navigation">
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="Homepage">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/041/317/399/small/3d-trolley-icon-on-transparent-background-png.png" 
+                 alt="Site logo" width="100" height="50">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#" aria-label="Home">Home</a></li>
+          <li><a href="#" aria-label="Shop">Shop</a></li>
+          <li><a href="#" aria-label="About">About</a></li>
+          <li><a href="#" aria-label="Contact">Contact</a></li>
+        </ul>
+      
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search products..." aria-label="Search">
+          <button id="search-button" type="button">Search</button>
+        </div>
+        
+        
+        <!-- Cart Icon -->
+        <div class="cart">
+          <a href="./panier.html" aria-label="Cart">
+            <img src="./images/logopanier.png" alt="Cart" class="cart-icon">
+            <span class="cart-count">0</span> <!-- Display item count -->
+          </a>
+        </div>
+    </nav>
+
+    <main>
+      <!-- Carousel Container -->
+
+      <div class="carousel">
+          <div class="carousel-images">
+              <img src="./images/homme 2.png" alt="Image 1">
+              <img src="./images/fille 2.png" alt="Image 2">
+              <img src="./images/Sans titre-8.jpg" alt="Image 3">
+          </div>
+          <!-- Carousel Navigation Buttons -->
+          <button class="carousel-btn prev" aria-label="Previous Slide">&#10094;</button>
+          <button class="carousel-btn next" aria-label="Next Slide">&#10095;</button>
+      </div>
+
+               <!-- *******************************Image Card 1 ********************************* -->
+
+               <h1 class="para">The Best Selection For You</h1>
+
+      <section class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="./images/imagewomen1.jpeg" alt="Product 1">
+            <div class="card-content">
+                <h3>Product 1</h3>
+                <p class="price">$99.99</p> 
+                <button class="btn" onclick="addToCart('Product 1', 99.99)">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="./images/image men 1.webp"   height="60px" width="20px"  alt="Product 2">
+            <div class="card-content">
+                <h3>Product 2</h3>
+                <p class="price">$49.99</p>
+                <button class="btn" onclick="addToCart('Product 2', 49.99)">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="./images/leather-jacket-outfits-men.jpg" alt="Product 3">
+            <div class="card-content">
+                <h3>Product 3</h3>
+                <p>Short description</p>
+                <p class="price">$99.99</p> <!-- Price added here -->
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+
+             <!-- Card 4 -->
+             <div class="card">
+              <img src="./images/87eec6e2fc6659c6ba699316cbce7246_shortAOP_marko-full_view_5000x.webp" alt="Product 3">
+              <div class="card-content">
+                  <h3>Product 4</h3>
+                  <p>Short description of the product goes here.</p>
+                  <button class="btn">Buy Now</button>
+              </div>
+          </div>
+
+
+               <!-- Card 5 -->
+        <div class="card">
+          <img src="./images/woman 2.avif" alt="Product 3">
+          <div class="card-content">
+              <h3>Product 5</h3>
+              <p>Short description of the product goes here.</p>
+              <button class="btn">Buy Now</button>
+          </div>
+      </div>
+
+
+           <!-- Card 6 -->
+           <div class="card">
+            <img src="./images/boy1.webp" alt="Product 3">
+            <div class="card-content">
+                <h3>Product 6</h3>
+                <p>Short description of the product goes here.</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+
+
+
+             <!-- Card 7 -->
+             <div class="card">
+              <img src="./images/rajel.jpg" alt="Product 3">
+              <div class="card-content">
+                  <h3>Product 7</h3>
+                  <p>Short description of the product goes here.</p>
+                  <button class="btn">Buy Now</button>
+              </div>
+          </div>
+
+
+
+               <!-- Card 8 -->
+        <div class="card">
+          <img src="./images/boy coustume.webp" alt="Product 3">
+          <div class="card-content">
+              <h3>Product 8</h3>
+              <p>Short description of the product goes here.</p>
+              <button class="btn">Buy Now</button>
+          </div>
+      </div>
+
+
+
+           <!-- Card 9 -->
+           <div class="card">
+            <img src="./images/leather-jacket-outfits-men.jpg" alt="Product 3">
+            <div class="card-content">
+                <h3>Product 9</h3>
+                <p>Short description of the product goes here.</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+             <!-- Card 10 -->
+             <div class="card">
+              <img src="./images/smoke-rise-womens-multi-embroidery-light-twill-outfit-aj24117-black-ap24114-black_3  woman wlh.webp" alt="Product 3">
+              <div class="card-content">
+                  <h3>Product 10</h3>
+                  <p>Short description of the product goes here.</p>
+                  <button class="btn">Buy Now</button>
+              </div>
+          </div>
+      
+      
+        <!-- Add more cards as needed -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100027521464081" aria-label="Facebook" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/achref_946/" aria-label="Instagram" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://github.com/achref-fraj" aria-label="GitHub" class="social-icon" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+          </a>
+          
+        </div>
+
+        <!-- Footer Text -->
+        <div class="footer-text">
+            <p>&copy; 2024 E-commerce Site. All rights reserved.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="./project.js"></script>
+</body>
+</html>
