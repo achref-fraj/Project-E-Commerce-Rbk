@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier</title>
     <link rel="stylesheet" href="./project.css">
+    <link rel="stylesheet" href="../css/panier.css">
+
 </head>
 <body>
 
-<h2>Your Cart</h2>
+<h2>Payment for Selected Product</h2>
 
-<div id="cart-items"></div> <!-- Container to display cart items -->
+<div id="cart-item">
+  <div class="cart-item-image">
+    <img id="product-image" src="" alt="">
+  </div>
+  <div class="cart-item-details">
+    <p id="product-name"></p>
+    <p>Price: $<span id="product-price">0.00</span></p>
+    <p>Quantity: <span id="product-quantity">1</span></p>
+    <p>Total: $<span id="total-price">0.00</span></p>
+  </div>
+</div>
 
-<p>Total: $<span id="total-price">0.00</span></p> <!-- Display total price -->
+<button class="pay-button">Proceed to Pay</button>
 
-<script src="./project.js"></script>
+
+<script src="../js/panier.js"></script>
 </body>
 </html>

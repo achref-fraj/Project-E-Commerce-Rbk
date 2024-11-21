@@ -1,15 +1,16 @@
-var cart = JSON.parse(localStorage.getItem('cart')) || []; // emty array , and lord cart from localstorage
+///////////////////////////////////////// Cart Functionality ///////////////////////////////////////////
+let cart = JSON.parse(localStorage.getItem('cart')) || []; 
 
-// display the cart 
+// Function to display the cart modal
 function showCart() {
   const modal = document.getElementById('cart-modal');
   const cartItemsContainer = document.getElementById('cart-items');
   const cartTotalElement = document.getElementById('cart-total');
 
-  
+  // Clear existing items
   cartItemsContainer.innerHTML = '';
 
-  
+  // Populate modal with cart items
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
   } else {
@@ -30,23 +31,24 @@ function showCart() {
           </div>
         </div>
         <button class="remove-item" data-index="${index}">Remove</button>
+        <button class="pay-item" data-index="${index}">Pay</button>
       `;
       cartItemsContainer.appendChild(itemElement);
     });
   }
 
-  // Calculate total price
+  // Calculate total and make sure prices are valid
   const total = cart.reduce((sum, item) => sum + (item.price ? item.price * item.quantity : 0), 0);
   cartTotalElement.textContent = `$${total.toFixed(2)}`;
 
-
+  // Show modal
   modal.style.display = 'flex';
 
-  // Attach event listeners for quantity controls and remove buttons
+  // Attach event listeners for quantity controls, remove buttons, and pay buttons
   attachEventListeners();
 }
 
-// Function to attach event listeners for quantity controls and remove buttons
+// Function to attach event listeners for quantity controls, remove buttons, and pay buttons
 function attachEventListeners() {
   // Decrease quantity
   document.querySelectorAll('.decrease-quantity').forEach((button) => {
@@ -76,6 +78,20 @@ function attachEventListeners() {
       const index = event.target.dataset.index;
       cart.splice(index, 1);
       updateCart();
+    });
+  });
+
+  // Handle "Pay" button click
+  document.querySelectorAll('.pay-item').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const index = event.target.dataset.index;
+
+      // Save the selected product to localStorage
+      const selectedProduct = cart[index];
+      localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+
+      // Redirect to panier.html
+      window.location.href = 'panier.html';
     });
   });
 }

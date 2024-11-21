@@ -29,7 +29,6 @@ setInterval(() => {
 
 
 
-
 ///////////////////////////////////////// Cart Functionality ///////////////////////////////////////////
 let cart = JSON.parse(localStorage.getItem('cart')) || []; 
 
@@ -63,6 +62,7 @@ function showCart() {
           </div>
         </div>
         <button class="remove-item" data-index="${index}">Remove</button>
+        <button class="pay-item" data-index="${index}">Pay</button>
       `;
       cartItemsContainer.appendChild(itemElement);
     });
@@ -75,11 +75,11 @@ function showCart() {
   // Show modal
   modal.style.display = 'flex';
 
-  // Attach event listeners for quantity controls and remove buttons
+  // Attach event listeners for quantity controls, remove buttons, and pay buttons
   attachEventListeners();
 }
 
-// Function to attach event listeners for quantity controls and remove buttons
+// Function to attach event listeners for quantity controls, remove buttons, and pay buttons
 function attachEventListeners() {
   // Decrease quantity
   document.querySelectorAll('.decrease-quantity').forEach((button) => {
@@ -109,6 +109,20 @@ function attachEventListeners() {
       const index = event.target.dataset.index;
       cart.splice(index, 1);
       updateCart();
+    });
+  });
+
+  // Handle "Pay" button click
+  document.querySelectorAll('.pay-item').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const index = event.target.dataset.index;
+
+      // Save the selected product to localStorage
+      const selectedProduct = cart[index];
+      localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+
+      // Redirect to panier.html
+      window.location.href = 'panier.html';
     });
   });
 }
@@ -168,14 +182,6 @@ function updateCart() {
 
 // Initialize the cart count when the page loads
 updateCartCount();
-
-
-
-
-
-
-
-
 
 
 /////////////////////////////////////////////////////////Search functionality///////////////////////////////////////////////
