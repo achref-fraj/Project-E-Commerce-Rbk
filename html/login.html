@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <nav aria-label="Primary Navigation">
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="Homepage">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/041/317/399/small/3d-trolley-icon-on-transparent-background-png.png" 
+                 alt="Site logo" width="100" height="50">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="./HomePage.html" aria-label="Home">Home</a></li>
+          <li><a href="./HomePage.html" aria-label="Shop">All Product</a></li>
+          <li><a href="./men.html" aria-label="men" >Men</a></li>
+          <li><a href="./women.html" aria-label="Contact">Women</a></li>
+          <li><a href="./girl.htm" aria-label="Contact">Girl</a></li>
+          <li><a href="./Boy.html" aria-label="Contact">Boy</a></li>
+        </ul>
+      
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search products..." aria-label="Search">
+          <button id="search-button" type="button">Search</button>
+        </div>
+        
+
+        <!-- User Img -->
+        <div class="ca">
+            <a href="./login.html" aria-label="Cart">
+              <img src="../images/user.png" alt="Cart" class="cart-icon">
+            </a>
+          </div>
+        
+        <!-- Cart Icon -->
+        <div class="cart">
+          <a href="./panier.html" aria-label="Cart">
+            <img src="../images/logopanier.png" alt="Cart" class="cart-icon">
+            <span class="cart-count">0</span> <!-- Display item count -->
+          </a>
+        </div>
+
+
+
+    </nav>
+</head>
+<body>
+
+    <section class="account-page">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Sign in</span>
+                            <span onclick="register()">Sign Up</span>
+                            <hr id="Indicator">
+                        </div>
+<form id="LoginForm">
+    <h3>Welcome Back!👋</h3>
+    <br>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="password">
+    <br>
+    <a href="">Forgot password?</a> <br>
+    <button type="submit" class="btn">Login</button>
+    <br>
+    <a href=""><u>Don't have an account? Sign Up</u></a>
+</form>
+
+<form id="RegForm">
+    <h3>Create new account</h3>
+    <br>
+    <input type="text" autocomplete="off" placeholder="Username">
+    <input type="email" autocomplete="off" placeholder="Email">
+    <input type="password" autocomplete="off" placeholder="password">
+    <button type="submit" class="btn">Create Account</button>
+    <br>
+    <a href=""><u>Already have an account? Sign in</u></a>
+</form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100027521464081" aria-label="Facebook" class="social-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/achref_946/" aria-label="Instagram" class="social-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram" width="24" height="24">
+                </a>
+                <a href="https://github.com/achref-fraj" aria-label="GitHub" class="social-icon" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+              </a>
+              
+            </div>
+    
+            <!-- Footer Text -->
+            <div class="footer-text">
+                <p>&copy; 2024 E-commerce Site. All rights reserved.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/login.js">
+
+    </script>
+</body>
+</html>

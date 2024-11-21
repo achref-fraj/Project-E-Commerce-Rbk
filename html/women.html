@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <nav aria-label="Primary Navigation">
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="Homepage">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/041/317/399/small/3d-trolley-icon-on-transparent-background-png.png" 
+                 alt="Site logo" width="100" height="50">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="./HomePage.html" aria-label="Home">Home</a></li>
+          <li><a href="./HomePage.html" aria-label="Shop">All Product</a></li>
+          <li><a href="./men.html" aria-label="men" >Men</a></li>
+          <li><a href="./women.html" aria-label="Contact">Women</a></li>
+          <li><a href="./girl.htm" aria-label="Contact">Girl</a></li>
+          <li><a href="./Boy.html" aria-label="Contact">Boy</a></li>
+        </ul>
+      
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search products..." aria-label="Search">
+          <button id="search-button" type="button">Search</button>
+        </div>
+        
+
+        <!-- User Img -->
+        <div class="ca">
+            <a href="./login.html" aria-label="Cart">
+              <img src="../images/user.png" alt="Cart" class="cart-icon">
+            </a>
+          </div>
+        
+   
+           <!-- Cart Icon -->
+           <div class="cart">
+            <a href="#" aria-label="Cart">
+              <img src="../images/logopanier.png" alt="Cart" class="cart-icon">
+              <span class="cart-count">0</span> <!-- Display item count -->
+            </a>
+          </div>
+  
+          
+          <div id="cart-modal" style="display: none;">
+              <div id="cart-items"></div>
+              <p>Total: <span id="cart-total"></span></p>
+              <button onclick="document.getElementById('cart-modal').style.display = 'none';">Close</button>
+            </div>
+
+
+
+    </nav>
+</head>
+<body>
+
+    <main>
+     
+     
+                                 <!-- Carousel Container -->
+
+
+      <div class="carousel">
+        <div class="carousel-images">
+            <img src="../imgwomen/femme 2.png" alt="Image 1">
+            <img src="../imgwomen/femme.png" alt="Image 2">
+            
+        </div>
+        <!-- Carousel Navigation Buttons -->
+        <button class="carousel-btn prev" aria-label="Previous Slide">&#10094;</button>
+        <button class="carousel-btn next" aria-label="Next Slide">&#10095;</button>
+    </div>
+
+
+                                          <!-- Filter Section -->
+         <div class="filter-container">
+            <!-- Filter Products Toggle Button -->
+            <button id="toggle-filter" class="filter-toggle">Filter Products</button>
+        
+            <!-- Filter Section -->
+            <div class="filter-section" id="filter-section" style="display: none;">
+                <!-- Filter by Name -->
+                <input type="text" id="filter-name" placeholder="Search by Product Name" aria-label="Search by name">
+        
+                <!-- Filter by Price -->
+                <select id="filter-price" aria-label="Filter by price">
+                    <option value="">Select Price Range</option>
+                    <option value="0-50">DT0 - DT50</option>
+                    <option value="50-100">DT50 - DT100</option>
+                    <option value="100-200">DT100 - DT200</option>
+                </select>
+        
+                <!-- Filter Button -->
+                <button id="filter-button" type="button">Filter</button>
+            </div>
+        </div>
+
+
+
+
+
+        
+                                              <!-- All Card -->
+    <section class="card-container">
+    
+
+
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="../images/imagewomen1.jpeg" alt="Product 1">
+            <div class="card-content">
+                <h3>Vest</h3>
+                <p class="price">200DT</p> 
+                <button class="btn" onclick="addToCart('Vest', 200,'../images/imagewomen1.jpeg')"> <i class="fa fa-shopping-cart"></i> Buy Now</button>
+            </div>
+        </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="../imgwomen/pyjama.webp" alt="Product 1">
+                <div class="card-content">
+                    <h3>pyjama</h3>
+                    <p class="price">100DT</p> 
+                    <button class="btn" onclick="addToCart('pyjama', 100,'../imgwomen/pyjama.webp')"> <i class="fa fa-shopping-cart"></i> Buy Now</button>
+                </div>
+            </div>
+
+               <!-- Card 3 -->
+               <div class="card">
+                <img src="../images/woman 2.avif" alt="Product 3">
+                <div class="card-content">
+                    <h3>Shirt</h3>
+                    <p class="price">45DT</p>
+                    <button class="btn"  onclick="addToCart('Shirt', 45,'../images/woman 2.avif')"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+                </div>
+            </div>
+
+                 <!-- Card 4 -->
+                 <div class="card">
+                    <img src="../imgwomen/Shoes 1.jpeg" alt="Product 3">
+                    <div class="card-content">
+                        <h3>Shoes</h3>
+                        <p class="price">150</p>
+                        <button class="btn"  onclick="addToCart('Shoes', 150,'../imgwomen/Shoes 1.jpeg')"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+                    </div>
+                </div>
+    
+    <!-- Card 5 -->
+    <div class="card">
+        <img src="../imgwomen/short.avif" alt="Product 3">
+        <div class="card-content">
+            <h3>short</h3>
+            <p class="price">45DT</p>
+            <button class="btn"  onclick="addToCart('short', 45,'../imgwomen/short.avif')"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+        </div>
+    </div>
+
+            
+             <!-- Card 6 -->
+             <div class="card">
+                <img src="../images/smoke-rise-womens-multi-embroidery-light-twill-outfit-aj24117-black-ap24114-black_3  woman wlh.webp" alt="Product 3">
+                <div class="card-content">
+                    <h3>jeans</h3>
+                    <p class="price">60DT</p>
+                    <button class="btn"  onclick="addToCart('jeans', 60,'../images/smoke-rise-womens-multi-embroidery-light-twill-outfit-aj24117-black-ap24114-black_3  woman wlh.webp')"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+                </div>
+            </div>
+        
+
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="../imgwomen/Shoes2.webp" alt="Product 3">
+            <div class="card-content">
+                <h3>Shoes</h3>
+                <p class="price">65DT</p>
+                <button class="btn"  onclick="addToCart('Shoes', 65,'../imgwomen/Shoes2.webp')"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+            </div>
+        </div>
+    
+      
+      
+        <!-- Add more cards as needed -->
+    </section>
+
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100027521464081" aria-label="Facebook" class="social-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/achref_946/" aria-label="Instagram" class="social-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram" width="24" height="24">
+                </a>
+                <a href="https://github.com/achref-fraj" aria-label="GitHub" class="social-icon" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+              </a>
+              
+            </div>
+    
+            <!-- Footer Text -->
+            <div class="footer-text">
+                <p>&copy; 2024 E-commerce Site. All rights reserved.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"cb514de82d3943448bd74bfa7effe895","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+     
+    <script src="../js/carouselwomen.js"></script>
+    <script src="../js/filterwomen.js"></script>
+    <script src="../js/womencart.js"></script>
+    <script src="../js/project.js"></script>
+    <script src="../js/rest.js"></script>
+</body>
+</html>

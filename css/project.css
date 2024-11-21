@@ -1,0 +1,615 @@
+
+.ca{
+  margin-left: 150px;
+  padding-left: 150px;
+  
+}
+
+
+/* Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+.para{
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.search-bar {
+  display: flex;
+padding-left: 150px;
+margin-right: -100px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-bar button:hover {
+  background-color: #e0c400;
+}
+
+.cart {
+  position: relative;
+
+}
+
+.cart-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/***************************************************************Footer*********************************************/
+footer {
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-text {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1);
+}
+
+.quick-links ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin: 0;
+}
+
+.quick-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: #f2a900;
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quick-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    margin-bottom: 10px;
+  }
+}
+
+/********************************************************Carousel Image **************************************************/
+
+
+
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/********************************************************CardImage **************************************************/
+
+
+/******************************************************** Card Image Styling **************************************************/
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 420px; /* Adjusted to fit content */
+  width: 250px;
+}
+
+/* Image Styling */
+.card img {
+  width: 100%;
+  height: 220px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Adds a subtle border under the image */
+}
+
+/* Card Content Styling */
+.card-content {
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content .price {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn i {
+  margin-right: 5px; /* Space between icon and text */
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.btn:hover {
+  background-color: #e0c400;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/********************************************************LOgin Page**************************************************/
+/*Account*/
+.account-page {
+  padding: 50px 0;
+  background: #e3e6f3;
+}
+
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 380px;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.form-container:hover {
+  box-shadow: 0 5px 15px #616464;
+}
+
+.form-container span {
+  font-weight: 680;
+  padding: 0 10px;
+  color: #524f4f;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 100px;
+  transition: transform 1s;
+
+}
+
+#LoginForm input {
+  padding: 7px 30px;
+  border-radius: 5px;
+  background-color: #c9cbce;
+  color: #000;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+#RegForm input {
+  padding: 7px 30px;
+  border-radius: 5px;
+  background-color: #c9cbce;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h3 {
+  font-weight: 590;
+  color: #088178;
+}
+
+form .btn {
+  width: 40%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #f2f6f6;
+  background-color: #088178;
+
+}
+
+form .btn:focus {
+  outline: none;
+
+}
+
+#LoginForm {
+  left: -300px;
+}
+
+#RegForm {
+  left: 0;
+}
+
+form a {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+
+/***********************************************************Filter****************************************************/
+
+/* General styling for the container */
+.filter-container {
+  width: 300px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+}
+
+/* Styling for the filter toggle button */
+.filter-toggle {
+  width: auto; /* Adjust width to fit content */
+  padding: 12px 20px;
+  background-color: #f2ea08;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* Space below the button */
+}
+
+/* Hover effect for the toggle button */
+.filter-toggle:hover {
+  background-color: #000000ac;
+}
+
+/* General styling for the filter section */
+.filter-section {
+  background-color: #fff700;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Input field styling */
+#filter-name {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Select dropdown styling */
+#filter-price {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+#filter-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #060606;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+#filter-button:hover {
+  background-color: #f99d09;
+}
+
+
+/**************************************************Totale cart**********************************/
+/************************************************** Improved Cart Styling **********************************/
+
+/* Cart Modal Styling */
+#cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cart-item-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #333;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  padding: 5px 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background: #0056b3;
+}
+
+.remove-item {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  background: #cc0000;
+}
+
+/* Total and Checkout */
+.cart-total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #28a745;
+  color: rgb(73, 45, 45);
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkout-button:hover {
+  background: #218838;
+}
